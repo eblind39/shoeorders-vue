@@ -1,0 +1,15 @@
+import gql from 'graphql-tag';
+
+export const GET_MARCAS = gql`query 
+marcas {
+    marcas {
+        id
+        nombre_marca
+        id_archivo_subido_img
+        imagen_lowres_uid
+        imagen_original_uid
+        url_imagen_lowres_uid
+        url_imagen_original_uid
+        __typename
+    }
+}`;

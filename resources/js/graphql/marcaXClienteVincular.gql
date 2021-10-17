@@ -1,0 +1,22 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    marcaXClienteVincular
+    (
+        $id_cliente: Int!,
+        $ids_marcas: String!
+    )
+    {
+        marcaXClienteVincular
+        (
+            id_cliente: $id_cliente,
+            ids_marcas: $ids_marcas
+        )
+        {
+            id
+            id_cliente
+            id_marca
+            observaciones
+            __typename
+        }
+}`;

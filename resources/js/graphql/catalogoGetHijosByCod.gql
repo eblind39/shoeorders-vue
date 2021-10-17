@@ -1,0 +1,20 @@
+import gql from 'graphql-tag';
+
+export const GET_CATALOGOSHJS_BY_CODFTHR = gql`query 
+catalogosHijosXCod
+(
+    $codigo_catalogo: String!
+) 
+{
+    catalogosHijosXCod
+    (
+        codigo_catalogo: $codigo_catalogo
+    )
+    {
+        id_catalogo
+        id_catalogo_padre
+        codigo_catalogo
+        valor
+        __typename
+    }
+}`;

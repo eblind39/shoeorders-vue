@@ -1,0 +1,32 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    productoXClienteUpdate
+    (
+        $id: Int!,
+        $id_cliente: Int!,
+        $id_producto: Int!,
+        $descuento: Int,
+        $precio: Int,
+        $observaciones: String
+    ) 
+    {
+        productoXClienteUpdate
+        (
+            id: $id,
+            id_cliente: $id_cliente,
+            id_producto: $id_producto,
+            descuento: $descuento,
+            precio: $precio,
+            observaciones: $observaciones
+        )
+        {
+            id
+            id_cliente
+            id_producto
+            descuento
+            precio
+            observaciones
+            __typename
+        }
+}`;

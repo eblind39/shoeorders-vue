@@ -1,0 +1,51 @@
+import gql from 'graphql-tag';
+
+export const GET_PRODUCTO_BY_ID = gql`query 
+    producto
+    (
+        $id: Int,
+        $id_categoria: Int,
+        $id_marca: Int,
+        $nombre_descripcion: String,
+        $es_busqueda: Int,
+        $es_marcaxcliente: Int
+    ) 
+    {
+        producto
+        (
+            id: $id,
+            id_categoria: $id_categoria,
+            id_marca: $id_marca,
+            nombre_descripcion: $nombre_descripcion,
+            es_busqueda: $es_busqueda,
+            es_marcaxcliente: $es_marcaxcliente
+        )
+        {
+            id
+            referencia_cod_prov
+            descripcion
+            nombre_producto
+            id_archivo_subido_img
+            url_imagen_lowres_uid
+            url_imagen_original_uid
+            id_color
+            color
+            id_marca
+            nombre_marca
+            id_img_marca
+            id_tipo_material
+            tipo_material
+            id_genero
+            genero
+            id_categoria
+            categoria
+            precio
+            tiene_producto_desc
+            descuento_producto_cliente
+            tiene_marca_desc
+            descuento_marca_prod
+            total_unidades
+            esta_en_carrito_draft
+            __typename
+        }
+    }`;

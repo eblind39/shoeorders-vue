@@ -1,0 +1,27 @@
+import gql from 'graphql-tag';
+
+export const GET_SEC_OPTMENU_BY_ROLEID = gql`query 
+optsmenuXRol
+    (
+        $id_role: Int
+    ) 
+    {
+        optsmenuXRol
+        (
+            id_role: $id_role
+        ) 
+        {
+            id_acceso
+            id_opcion_menu
+            id_opcion_menu_padre
+            componente_ruta
+            descripcion
+            es_form_registro
+            icon_fa
+            imagen
+            nombre_ruta
+            ruta
+            tip
+            __typename
+        }
+}`;

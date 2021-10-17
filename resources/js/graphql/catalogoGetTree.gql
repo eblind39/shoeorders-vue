@@ -1,0 +1,13 @@
+import gql from 'graphql-tag';
+
+export const GET_CATALOGOS_TREE = gql`query catalogosTree($id: Int) {
+    catalogosTree(id: $id) {
+        id
+        label
+        icon
+        esfrmreg
+        inode
+        open
+        __typename
+    }
+}`;

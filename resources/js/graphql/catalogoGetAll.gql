@@ -1,0 +1,11 @@
+import gql from 'graphql-tag';
+
+export const GET_CATALOGOS = gql`query catalogos {
+    catalogos {
+        id_catalogo
+        id_catalogo_padre
+        codigo_catalogo
+        valor
+        __typename
+    }
+}`;

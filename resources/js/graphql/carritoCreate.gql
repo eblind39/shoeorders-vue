@@ -1,0 +1,35 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    carritoCreate
+    (
+        $cod_estado_carrito: String,
+        $id_producto: Int,
+        $cantidad: Int
+    )
+    {
+        carritoCreate
+        (
+            cod_estado_carrito: $cod_estado_carrito,
+            id_producto: $id_producto,
+            cantidad: $cantidad
+        )
+        {
+            id
+            id_cliente
+            id_estado_carrito
+            id_producto
+            precio
+            cantidad
+            precio_total
+            tiene_descuento_porprod
+            descuento_porprod
+            precio_descuento_porprod
+            precio_total_descuento_porprod
+            tiene_descuento_pormrc
+            descuento_pormrc
+            precio_descuento_pormrc
+            precio_total_descuento_pormrc
+            __typename
+        }
+}`;

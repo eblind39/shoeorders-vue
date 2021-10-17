@@ -1,0 +1,19 @@
+import gql from 'graphql-tag';
+
+export const GET_SEC_OPTSMENU_TREE = gql`query 
+secOpcionesMenuTree
+    (
+        $id: Int
+    ) 
+    {
+        secOpcionesMenuTree(id: $id) 
+        {
+            id
+            label
+            icon
+            esfrmreg
+            inode
+            open
+            __typename
+        }
+}`;

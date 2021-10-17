@@ -1,0 +1,9 @@
+import gql from 'graphql-tag';
+
+export const GET_CARTTOTALPRODS_BY_USRID = gql`query 
+carritoGetTotalProductosXUsrId {
+    carritoGetTotalProductosXUsrId {
+        totalprods
+        __typename
+    }
+}`;

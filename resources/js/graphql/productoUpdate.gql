@@ -1,0 +1,50 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    productoUpdate
+    (
+        $id: Int!,
+        $referencia_cod_prov: String!,
+        $nombre: String!,
+        $descripcion: String,
+        $id_archivo_subido_img: Int,
+        $id_color: Int!,
+        $id_marca: Int!,
+        $id_tipo_material: Int,
+        $id_genero: Int,
+        $id_categoria: Int,
+        $precio: Int,
+        $total_unidades: Int,
+    ) 
+    {
+        productoUpdate
+        (
+            id: $id,
+            referencia_cod_prov: $referencia_cod_prov,
+            nombre: $nombre,
+            descripcion: $descripcion,
+            id_archivo_subido_img: $id_archivo_subido_img,
+            id_color: $id_color,
+            id_marca: $id_marca,
+            id_tipo_material: $id_tipo_material,
+            id_genero: $id_genero,
+            id_categoria: $id_categoria,
+            precio: $precio,
+            total_unidades: $total_unidades
+        )
+        {
+            id
+            referencia_cod_prov
+            nombre
+            descripcion
+            id_archivo_subido_img
+            id_color
+            id_marca
+            id_tipo_material
+            id_genero
+            id_categoria
+            precio
+            total_unidades
+            __typename
+        }
+}`;

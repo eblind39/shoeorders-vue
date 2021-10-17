@@ -1,0 +1,23 @@
+import gql from 'graphql-tag';
+
+export const GET_MARCA_BY_ID = gql`query 
+    marca
+    (
+        $id: Int
+    ) 
+    {
+        marca
+        (
+            id: $id
+        )
+        {
+            id
+            nombre_marca
+            id_archivo_subido_img
+            imagen_lowres_uid
+            imagen_original_uid
+            url_imagen_lowres_uid
+            url_imagen_original_uid
+            __typename
+        }
+}`;

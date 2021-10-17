@@ -1,0 +1,37 @@
+import gql from 'graphql-tag';
+
+export const GET_USERSTBL_BY_ID = gql`query 
+    usuariotbl
+    (
+        $id: Int,
+        $cod_role: String
+    ) 
+    {
+        usuariotbl
+        (
+            id: $id,
+            cod_role: $cod_role
+        )
+        {
+            id
+            username
+            email
+            id_archivo_subido_img
+            nombre_completo
+            telefono_fijo
+            telefono_celular
+            id_ciudad
+            ciudad
+            id_zona
+            zona
+            id_tipo_pago
+            tipo_pago
+            limite_credito
+            costo_por_envio
+            talla_zapato
+            direccion
+            url_imagen_lowres_uid
+            url_imagen_original_uid
+            __typename
+        }
+}`;

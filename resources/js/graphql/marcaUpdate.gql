@@ -1,0 +1,23 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    marcaUpdate
+    (
+        $id: Int!,
+        $nombre: String!,
+        $id_archivo_subido_img: Int!
+    ) 
+    {
+        marcaUpdate
+        (
+            id: $id,
+            nombre: $nombre,
+            id_archivo_subido_img: $id_archivo_subido_img
+        )
+        {
+            id
+            nombre
+            id_archivo_subido_img
+            __typename
+        }
+}`;

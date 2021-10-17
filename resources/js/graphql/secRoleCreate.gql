@@ -1,0 +1,24 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    secRoleCreate
+    (
+        $codigo: String,
+        $name: String,
+        $description: String!,
+    ) 
+    {
+        secRoleCreate
+        (
+            codigo: $codigo,
+            name: $name,
+            description: $description
+        )
+        {
+            id
+            codigo
+            name
+            description
+            __typename
+        }
+}`;

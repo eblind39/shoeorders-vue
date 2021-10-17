@@ -1,0 +1,19 @@
+import gql from 'graphql-tag';
+
+export const GET_PRODUCTOS = gql`query productos {
+    productos {
+        id
+        referencia_cod_prov
+        nombre
+        descripcion
+        id_archivo_subido_img
+        id_color
+        id_marca
+        id_tipo_material
+        id_genero
+        id_categoria
+        precio
+        total_unidades
+        __typename
+    }
+}`;

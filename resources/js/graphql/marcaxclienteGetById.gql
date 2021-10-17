@@ -1,0 +1,27 @@
+import gql from 'graphql-tag';
+
+export const GET_MARCAXCLIENTE_BY_IDCLI = gql`query 
+    marcasxclienteId
+    (
+        $id_cliente: Int
+    ) 
+    {
+        marcasxclienteId
+        (
+            id_cliente: $id_cliente
+        )
+        {
+            id
+            id_cliente
+            id_marca
+            nombre_marca
+            id_archivo_subido_img
+            imagen_lowres_uid
+            imagen_original_uid
+            url_imagen_lowres_uid
+            url_imagen_original_uid
+            descuento
+            observaciones
+            __typename
+        }
+}`;

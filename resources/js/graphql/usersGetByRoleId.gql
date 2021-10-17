@@ -1,0 +1,31 @@
+import gql from 'graphql-tag';
+
+export const GET_USERS_BY_ROLEID = gql`query 
+    usersByRoleId
+    (
+        $id_role: Int!
+    ) 
+    {
+        usersByRoleId
+        (
+            id_role: $id_role
+        ) 
+        {
+            id
+            cedula
+            direccion
+            email
+            id_archivo_subido_img
+            id_ciudad
+            id_zona
+            nombre_completo
+            talla_zapato
+            telefono_celular
+            telefono_fijo
+            username
+            id_tipo_pago
+            limite_credito
+            costo_por_envio
+            __typename
+        }
+}`;

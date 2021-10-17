@@ -1,0 +1,17 @@
+import gql from 'graphql-tag';
+
+export const GET_SEC_OPTMENU_BY_ID = gql`query secOpcionMenu($id: Int!) {
+    secOpcionMenu(id_opcion_menu: $id) {
+        id_opcion_menu
+        id_opcion_menu_padre
+        descripcion
+        ruta
+        componente_ruta
+        nombre_ruta
+        es_form_registro
+        icon_fa
+        imagen
+        tip
+        __typename
+    }
+}`;

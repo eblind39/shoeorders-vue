@@ -1,0 +1,17 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    accesosVincularXRoleId
+    (
+        $id_role: Int,
+        $ids_optsmnu: String,
+        $ids_users: String
+    )
+    {
+        accesosVincularXRoleId
+        (
+            id_role: $id_role,
+            ids_optsmnu: $ids_optsmnu,
+            ids_users: $ids_users
+        )
+}`;

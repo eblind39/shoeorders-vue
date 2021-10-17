@@ -1,0 +1,40 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    secOpcionMenuCreate
+    (
+        $id_opcion_menu_padre: Int,
+        $descripcion: String!,
+        $ruta: String,
+        $componente_ruta: String,
+        $nombre_ruta: String,
+        $es_form_registro: Boolean,
+        $icon_fa: String,
+        $imagen: String,
+        $tip: String
+    ) 
+    {
+        secOpcionMenuCreate
+        (
+            id_opcion_menu_padre: $id_opcion_menu_padre,
+            descripcion: $descripcion,
+            ruta: $ruta,
+            componente_ruta: $componente_ruta,
+            nombre_ruta: $nombre_ruta,
+            es_form_registro: $es_form_registro,
+            icon_fa: $icon_fa,
+            imagen: $imagen,
+            tip: $tip
+        )
+        {
+            id_opcion_menu
+            id_opcion_menu_padre
+            descripcion
+            ruta
+            componente_ruta
+            nombre_ruta
+            es_form_registro
+            icon_fa
+            __typename
+        }
+}`;

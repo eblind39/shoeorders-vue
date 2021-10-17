@@ -1,0 +1,11 @@
+import gql from 'graphql-tag';
+
+export const GET_SEC_ROLE_BY_ID = gql`query secRole($id: Int!) {
+    secRole(id: $id) {
+        id
+        codigo
+        name
+        description
+        __typename
+    }
+}`;

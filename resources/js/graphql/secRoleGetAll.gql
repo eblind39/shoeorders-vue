@@ -1,0 +1,11 @@
+import gql from 'graphql-tag';
+
+export const GET_SEC_ROLES = gql`query secRoles {
+    secRoles {
+        id
+        codigo
+        name
+        description
+        __typename
+    }
+}`;

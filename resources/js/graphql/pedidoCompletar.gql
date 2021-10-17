@@ -1,0 +1,18 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    pedidoCompletar
+    (
+        $numero_pedido: String
+    )
+    {
+        pedidoCompletar
+        (
+            numero_pedido: $numero_pedido
+        )
+        {
+            message
+            __typename
+        }
+    }
+`;

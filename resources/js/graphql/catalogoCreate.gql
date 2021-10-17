@@ -1,0 +1,24 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    catalogoCreate
+    (
+        $id_catalogo_padre: Int,
+        $codigo_catalogo: String,
+        $valor: String!,
+    ) 
+    {
+        catalogoCreate
+        (
+            id_catalogo_padre: $id_catalogo_padre,
+            codigo_catalogo: $codigo_catalogo,
+            valor: $valor
+        )
+        {
+            id_catalogo
+            id_catalogo_padre
+            codigo_catalogo
+            valor
+            __typename
+        }
+}`;

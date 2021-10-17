@@ -1,0 +1,13 @@
+import gql from 'graphql-tag';
+
+export default gql`mutation 
+    catalogoDelete
+    (
+        $id_catalogo: Int!,
+    ) 
+    {
+        catalogoDelete
+        (
+            id_catalogo: $id_catalogo,
+        )
+    }`;

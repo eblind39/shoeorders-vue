@@ -1,0 +1,15 @@
+import gql from 'graphql-tag';
+
+export const GET_ALL_SEC_OPTSMENU = gql`query secOpcionesMenu {
+    secOpcionesMenu {
+        # se coloca alias al id del padre
+        # id: id_opcion_menu
+        id_opcion_menu
+        id_opcion_menu_padre
+        descripcion
+        ruta
+        componente_ruta
+        nombre_ruta
+        __typename
+    }
+}`;

@@ -1,0 +1,43 @@
+import gql from 'graphql-tag';
+
+export const GET_PRODS_PEDIDOS = gql`query 
+pedidosRealizados 
+    (
+        $id_estado_pedido: Int,
+        $id_cliente: Int,
+        $numero_pedido: String
+    ) 
+    {
+        pedidosRealizados
+        (
+            id_estado_pedido: $id_estado_pedido,
+            id_cliente: $id_cliente,
+            numero_pedido: $numero_pedido
+        )
+        {
+            id_pedido
+            numero_pedido
+            nombre_cliente
+            codigo_estado_pedido
+            estado_pedido
+            id_productocrrt
+            referencia_cod_prov
+            nombre_producto
+            descripcion
+            id_archivo_subido_img
+            url_imagen_lowres_uid
+            url_imagen_original_uid
+            cantidad_producto
+            precio_unitario
+            precio_total
+            tiene_descuento_porprod
+            descuento_porprod
+            precio_descuento_porprod
+            precio_total_descuento_porprod
+            tiene_descuento_pormrc
+            descuento_pormrc
+            precio_descuento_pormrc
+            precio_total_descuento_pormrc
+            __typename
+        }
+    }`;
